@@ -99,6 +99,12 @@ class SearchResult(Index):
         )
         return posts
 
+class HomeDataView(APIView):
+    def get(self, request):
+        items = YourModel.objects.all()
+        serializer = YourModelSerializer(items, many=True)
+        return Response(serializer.data, status=status.HTTP_200_OK)
+    
 
 def add_comment(request, post_id):
     """Добавление комментария к статье"""
