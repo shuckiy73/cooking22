@@ -41,6 +41,7 @@ INSTALLED_APPS = [
     "cooking.apps.CookingConfig",
     'rest_framework',
     'drf_yasg',
+    'rest_framework_simplejwt',
 ]
 
 MIDDLEWARE = [
